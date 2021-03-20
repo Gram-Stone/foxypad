@@ -223,12 +223,12 @@
 
   (define format-menu (new menu% [label "Format"] [parent menu-bar]))
 
-  (new menu-item%
+  (new checkable-menu-item%
        [label "Word Wrap"]
        [parent format-menu]
        [callback
         (λ (i e)
-          (void))])
+          (send t auto-wrap (not (send t auto-wrap))))])
 
   (new menu-item%
        [label "Font..."]
