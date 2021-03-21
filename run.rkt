@@ -1,6 +1,4 @@
 #lang racket/base
 
-(require racket/lazy-require)
-
-(lazy-require ("rkt/main.rkt" (main)))
+(require "rkt/main.rkt")
 (main)
